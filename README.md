@@ -118,3 +118,112 @@ Lists:
 Lists are ordered sequences that can hold a variety of object types. 
 They use [] brackets and commas to separate the objects in the list. 
 Lists support indexing and slicing, and they can be nested and have useful methods.
+
+Dictionaries:
+Unordered mappings for storing objects, using key:value pairs.
+{'key1':'value1','key2':'value2'}
+Dictionaries: objects retrieved by key name (can't be sorted)
+Lists: objects retrieved by location (slice o index)
+
+Curly syntax:
+my_dict = {'key1':'value1','key2':'value2'}
+
+print(my_dict['key1'])
+
+Dictionaries can hold lists and other dictionaries as well as other data types. 
+Key calls can be stacked: my_dict['key1']['subkey1']
+
+To assign new key value pair: d['new_key] = 'new_value'
+Dictionary methods: 
+dict.keys()
+dict.values()
+dict.items()
+
+Tuples:
+Similar to lists, but they are immutable. Once an element is assigned, you can't grab it and modify it.
+Uses parentheses:
+
+my_tuple = (1,2,3)
+
+Methods:
+my_tuple.count(val)
+my_tuple.index(val)
+
+Sets:
+Unordered collections of unique elements. 
+
+my_set = set()
+my_set.add(1)
+
+Booleans:
+Operators that convey either True or False statements.
+greater than: >
+
+Basic file I/O:
+
+Only in Jupyter:
+ %%writefile my_file.txt
+Content
+
+my_file.read()
+my_file.seek(0)
+my_file.readlines()
+my_file.close()
+
+File locations:
+
+My_file = open("C:\\Users\\test.txt")
+
+with open("my_file.txt",mode='r') as my_file:
+    contents = my_file.read()
+
+Comparison operators:
+Equality: ==
+Not equal: !=
+Greater than: >
+Smaller than: <
+Greater or equal: >=
+Smaller or equal: <=
+
+Logical operator keywords:
+and: 1 < 2 and 2 < 3
+or: 1 < 2 or 2 < 3
+not: returns oppositve booleand of the comparison: not(1 == 1)
+
+Statements: control flow 
+if, elif, else:
+Python uses an indentation system, the control flow uses colons and indentation (whitespace). 
+
+if some_condition:
+    #Execute some code
+elif other_condition:
+    #Other code
+else:
+    #Some other code
+
+For loops:
+Iterable objects can be operated upon by for loops. Perform an action for every item in an object like a list.
+
+for item_name in my_iterable:
+    print(item_name)
+
+for num in mylist:
+    if num % 2 == 0:
+        print('even')
+    else:
+        print('odd number')
+
+Tuple unpacking: 
+Use the iterable variable in the for loop as a tuple, gives acces to the individual items:
+
+my_list = [(1,2),(3,4),(5,6),(7,8)]
+
+for (a,b) in my_list:
+    print(b)
+
+Iterate through dictionaries:
+
+d = {'k1':'one','k2':'two'}
+
+for key,value in d.items():
+    print(key)
